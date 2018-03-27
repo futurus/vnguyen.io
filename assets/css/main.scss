@@ -1,0 +1,31 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+@import "hydeout";
+
+.content {
+    min-width: 85%;
+}
+
+.project-item {
+    margin: auto; 
+    margin-bottom: 25px; 
+    max-width: 80%;
+}
+
+.project-title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.project-img {
+    border: 1px solid lightgray; 
+    margin: auto;
+    margin-top: 15px;
+}
+
+.project-desc {
+    margin-top: 10px;
+}

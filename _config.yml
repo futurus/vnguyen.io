@@ -1,0 +1,47 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Setup
+title:            Vu N. Nguyen
+tagline:          'Software Engineer'
+description:      'Software Engineer'
+url:              https://vnguyen.io
+baseurl:          # the optional subpath of your site, e.g. "/blog"
+                  # NB: This applies to all pages in your Jekyll site.
+                  # If you want to move just the blog index pages but keep
+                  # other pages at root, see the paginate_path and
+                  # sidebar_blog_link below.
+
+author:
+  name:           'Alex Vu N. Nguyen'
+  url:            https://twitter.com/futurus
+
+# paginate:         5
+# paginate_path:    '/page:num'
+                    # Or '/blog/page:num' if you want to move your index pages
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+
+# Custom vars
+# version:            1.0.0
+sidebar_home_link:  true
+# sidebar_blog_link:  '/blog'   # By default, your home page is your blog
+                                # page. If you change your paginate_path,
+                                # set this to the root of the paginate_path
+                                # to enable a separate blog link.
+github:
+  repo:             https://github.com/futurus
+
+google_analytics:   UA-116475234-1
+# linkedin:           
+#   in:               https://www.linkedin.com/in/vnguyenio/
+
+# angellist:           
+#   co:               https://angel.co/vnguyenio
+
+# email:              
+#   me:               mailto:vu@vnguyen.io

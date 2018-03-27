@@ -1,0 +1,49 @@
+<nav id="sidebar-icon-links">
+  <a id="github-link"
+      class="icon" title="Github Profile" aria-label="Github Profile"
+      href="{{ site.github.repo }}">
+    {% include svg/github.svg %}
+  </a>
+
+  <a id="linkedin-link"
+    class="icon" title="LinkedIn Profile" aria-label="LinkedIn Profile"
+    href="https://www.linkedin.com/in/vnguyenio/">
+    {% include svg/linkedin-in.svg %}
+  </a>
+
+  <a id="angelist-link"
+    class="icon" title="AngelList Profile" aria-label="AngelList Profile"
+    href="https://angel.co/vnguyenio">
+    {% include svg/angellist.svg %}
+  </a>
+
+  <a id="contact-link"
+     class="icon" title="Contact Me" aria-label="Contact Me"
+     href="mailto:vu@vnguyen.io">
+    {% include svg/envelope.svg %}
+  </a>
+
+  {% comment %}
+    Check if we have tag or search pages page active before linking to it.
+  {% endcomment %}
+  {% assign tags_page = false %}
+  {% assign search_page = false %}
+  {% for node in site.pages %}
+    {% if node.layout == "tags" %}
+      {% assign tags_page = node %}
+    {% elsif node.layout == "search" %}
+      {% assign search_page = node %}
+    {% endif %}
+  {% endfor %}
+
+  {% if search_page %}
+    <a id="search-link"
+       class="icon{% if page.url == '/search' %} active{% endif %}"
+       title="Search" aria-label="Search"
+       href="{{ site.baseurl }}{{ search_page.url }}">
+      {% include svg/search.svg %}
+    </a>
+  {% endif %}
+
+  {% include custom-icon-links.html %}
+</nav>
